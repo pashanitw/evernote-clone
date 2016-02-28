@@ -1,91 +1,131 @@
-ul,li{
+body, div, ul, li, p, h1, h2, h3, h4, h5, a {
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    line-height: 18px;
+}
+header {
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(18, 18, 18, 0.08);
+    height: 60px;
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    text-rendering: optimizelegibility;
+}
+.sc-sprite-Logo {
+    background-position: -223px 0;
+    display: block;
+    height: 36px;
+    margin: 25px auto;
+    width: 166px;
+    text-indent: -9999px;
+}
+[class*="sc-sprite"] {
+    background-image: url("http://dev3-www.samsclub.com/sams/redesign/shared/sherpa/sprite.png");
+}
+.mainContainer {
+    padding: 0 1%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+h1.regpagetitle {
+    color: #333;
+    font-family: "myriad-pro",arial;
+    font-size: 2.5em;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 30px 0;
+}
+
+#footerSection {
+    margin-top: 2%;
+    position: relative;
+    padding: 2% 1%;
+}
+#footerSection li {
+    margin-top: 3px;
+}
+.FooterBottmWrapper {
+    margin: 0 auto;
+    padding: 15px 0 10px;
+    max-width: 1000px;
+    border-top:1px solid #d2d2d2;
+}
+.FooterBottmWrapper ul {
+    margin-left: -15px;
+    list-style: outside none none;
+    padding: 0;
+}
+
+.FooterBottmWrapper li {
+    float: left;
+    margin-left: 15px;
+}
+
+.FooterBottmWrapper li a {
+    color: #0088cd;
+    font: 11px Arial;
+    text-decoration: none;
+}
+.cc_csrText {
+    border-top:none;
+}
+.tnc {
+    float:left;
     list-style: none;
 }
-.grid,.list{
-    width:1050px;
-    margin:0 auto;
+.tnc li {
+    float:left;
 }
-.grid .product{
-    border: 1px solid #ddd;
-    text-align: center;
-    display: inline-block;
-    width:300px;
-    margin: 15px;
-    box-shadow: 0px 5px 5px #888888;
-    border-radius: 5px;
+.tnc > li a {
+    color: #4d4d4d !important;
+    display:inline-block;
+    height: 16px;
 }
-.grid .product.li:first-child{
-    margin-left: 0;
+.tnc > li a:hover {
+    text-decoration: none;
 }
-.grid .product .prodName{
-    color: #003366;
+.sc-sprite-facebook {
+    background-position: -373px -36px;
+    text-indent: -999px;
+    width: 16px;
+}
+.sc-sprite-pinterest {
+    background-position: -223px -146px;
+    text-indent: -999px;
+    width: 16px;
+}
+.sc-sprite-twitter {
+    background-position: -326px -116px;
+    text-indent: -999px;
+    width: 16px;
+}
+.sc-sprite-google {
+    background-position: -373px -52px;
+    text-indent: -999px;
+    width: 16px;
+}
+.copyright {
+    float: right;
+    min-width: 275px;
+    padding: 10px 0;
+    text-align: right;
 }
 
-
-.list .product{
-    border: 1px solid #ddd;
+.fixboth::after {
+    clear: both;
+    content: ".";
     display: block;
-    height:50px
-    margin: 15px;
-    box-shadow: 0px 5px 5px #888888;
-    border-radius: 5px;
-    overflow: hidden;
-    padding-right: 100px;
-    position: relative;
-}
-.list .product.li:first-child{
-    margin-left: 0;
-}
-.list .product .prodName{
-    color: #003366;
-    float: left;
-    width:200px;
-    margin-left: 60px;
-}
-.list .product .price{
-    color: #003366;
-    float: left;
-    width:200px;
-}
-.list .product img{
-    position: absolute;
-    left: 0;
-    height: 40px;
-    width:40px;
-    margin-top: 7px;
-    margin-left: 5px;
-}
-
-/* react star rating*/
-.rsr-root {
-    vertical-align: middle;
-    display: inline-block; }
-
-.rsr--editing:hover {
-    cursor: pointer; }
-
-.rsr {
-    position: relative;
-    vertical-align: middle;
-    display: inline-block;
-    color: #e3e3e3;
-    overflow: hidden; }
-
-.rsr__stars {
-    position: absolute;
-    left: 0;
-    top: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #F5A71B;
-    -webkit-transition: all 0.01s;
-    -moz-transition: all 0.01s;
-    transition: all 0.01s; }
-
-.rsr__caption {
-    font-size: 1.25em;
-    vertical-align: middle;
-    margin-right: 0.5em; }
-
-.rsr--disabled .rsr-container:hover {
-    cursor: not-allowed; }
+    height: 0;
+    visibility: hidden;

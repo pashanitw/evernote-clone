@@ -5,15 +5,15 @@ var webpack = require('webpack');
 module.exports = {
     
     entry: [
-        'webpack-dev-server/client?http://localhost:3001',
         'webpack/hot/dev-server',
+        'webpack-dev-server/client?http://localhost:8080',
         './src/app'
     ],
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: "bundle.js",
-        publicPath: "/build"
+        filename: "bundle.js"
     },
+    debug:true,
     module: {
         loaders: [
             {
@@ -22,8 +22,12 @@ module.exports = {
                 loader: 'babel',
                 query:
                   {
-                    presets:['react','es2015']
+                    presets:['react','es2015','stage-1']
                   }
+            },
+            {
+                test: /\.s?css$/,
+                loader: 'style!css!sass'
             }
         ]
     },

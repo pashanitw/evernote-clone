@@ -1,0 +1,33 @@
+$toolbar-background:#f8f8f8;
+$toolbar-border-color:#ececec;
+$action-background:#2dbe60;
+html,body,.container-fluid,.main-container{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
+.action-toolbar{
+  width:80px;
+  float: left;
+  background-color: $toolbar-background;
+  height: 100%;
+  border: 1px solid $toolbar-border-color;
+  .action{
+    display: block;
+    width: 50px;
+    margin:20px auto;
+    color: $action-background;
+  }
+}
+
+.noteList{
+  height: 100%;
+  float: left;
+  width:320px;
+  .list-group-item{
+    width:100%;
+    height: 100px;
+    word-break: break-all;
+    overflow: hidden;
+  }
+}
